@@ -1,0 +1,323 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!--metatag-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gestione Presenze Asilo Nido" />
+    <meta name="keywords" content="Asilo Nido, Bambini, presenze, gestione, docente" />
+    <meta name="author" content="Team 2: Luca Tassiello - Vincenzo Barone - Francesco Esposito - Giuseppe Giordano - Roberto Bucco - Mattia Bascelli" />
+    <meta name="robots" content="index, follow" />
+    <meta name="referrer" content="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="img/logoasilo.ico">
+    <title>Gestione presenze Asilo nido - TEAM2</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+    <!--link bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!--CSS-->
+    <style>
+        body {
+            background-color: #6cc2c0;
+            width: 100%;
+            height: 100vh;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .navbar {
+            background-color: #6cc2c0;
+        }
+
+            .navbar li:hover {
+                background-color: rgba(134, 202, 195, 0.9);
+                border-radius: 20px;
+            }
+
+        .pt-2 {
+            background-color: white;
+            border-radius: 15px 0px 15px 0px;
+            /*padding: 0 0 2% 0;*/
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #6cc2c0;
+            bottom: 0;
+            width: 100%;
+            padding: 10px;
+        }
+
+        .form-presenze {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
+        .tabellaPresenze {
+            margin-right: 5%;
+            margin-left: 5%;
+        }
+
+        #tabellaPresenze {
+            overflow: auto;
+            min-height: 400px;
+        }
+
+        .logo {
+            width: 30px;
+            height: 24px;
+            margin-bottom: 4px;
+        }
+
+        .row {
+            width: 100%;
+        }
+
+        @media screen and (max-width: 720px) {
+            .table-responsive {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                -ms-overflow-style: -ms-autohiding-scrollbar;
+            }
+
+            .table {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <div class="container">
+                <a class="navbar-brand" href="homeLogged.html">
+                    <img src="img/logoasilo.png" alt="Gestionale Asilo Nido" class="logo"> Gestionale Asilo Nido
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse justify-content-end navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="homeLogged.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Docente
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="iscrizione.html">Iscrizione</a>
+                            <a class="dropdown-item" href="calendarioAttivita.html">Calendario Attività</a>
+                            <a class="dropdown-item" href="comunicazioni.html">Comunicazione Genitori</a>
+                            <a class="dropdown-item" href="gestionePresenze.html">Gestione Presenze</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="gestioneArmadietto.html">Gestione Armadietto</a>
+                            <a class="dropdown-item" href="menu.html">Gestione Menù Settimana</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contattiLogged.html">Developers</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="Index.html">LOGOUT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--gestione presenze-->
+    <main class="pt-2">
+        <div class="container mt-5">
+            <h1 class="text-center">GESTIONE PRESENZE</h1>
+
+            <hr />
+            <div class="row">
+
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="titolo mt-3 mb-3">
+                        <h2 class="text-center">Inserisci presenza</h2>
+                    </div>
+                    <form class="form-presenze">
+
+                        <div class="form-floating mb-3 ">
+
+                            <input type="text" class="form-control border-success" id="cognomeBambino" placeholder="Rossi">
+                            <label for="cognomeBambino">Cognome Bambino *</label>
+                        </div>
+                        <div class="form-floating mb-3 ">
+
+                            <input type="text" class="form-control border-success" id="nomeBambino" placeholder="Mario">
+                            <label for="nomeBambino">Nome Bambino *</label>
+                        </div>
+                        <div class="form-floating mb-3 ">
+                            <input type="date" class="form-control border-success" id="data">
+                            <label for="data">Data *</label>
+                        </div>
+                        <div class="form-floating mb-3 ">
+                            <input type="time" class="form-control border-success" id="oraArrivo">
+                            <label for="oraArrivo">Ora Di Ingresso *</label>
+                        </div>
+                        <div class="form-floating mb-3 ">
+
+                            <input type="time" class="form-control border-success" id="oraPartenza">
+                            <label for="oraPartenza">Ora Di Uscita *</label>
+                        </div>
+                        <div class="form-floating mb-3">
+
+                            <textarea class="form-control border-success" placeholder="Leave a comment here" id="note" aria-label="With textarea"></textarea>
+                            <label for="note">Note</label>
+
+
+                        </div>
+                        <div class="btn-group-vertical mb-3" role="group" aria-label="Vertical button group">
+                            <button type="button" class="btn btn-outline-success" onclick="inviaPresenza()">Inserisci Presenza</button>
+
+                        </div>
+                        <div class="btn-group-vertical mb-3" role="group" aria-label="Vertical button group">
+                            <button type="button" class="btn btn-outline-success" onclick="resetta()">Resetta Presenza</button>
+                        </div>
+
+
+                    </form>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 table-responsive">
+                    <div class="tabellaPresenze mt-3">
+                        <h2 class="text-center mb-4">Tabella Presenze</h2>
+                        <table class="table">
+                            <thead>
+                                <tr class="table-info">
+                                    <th>Cognome Bambino</th>
+                                    <th>Nome Bambino</th>
+                                    <th>Data</th>
+                                    <th>Ora di Arrivo</th>
+                                    <th>Ora di Partenza</th>
+                                    <th>Note</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabellaPresenze">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <!--footer-->
+    <footer class="footer">
+        <p>&copy; 2024 TEAM2 - Tutti i diritti riservati.</p>
+    </footer>
+
+    <script>
+        var cognomeBambino = document.getElementById('cognomeBambino');
+        var nomeBambino = document.getElementById('nomeBambino');
+        var data = document.getElementById('data');
+        var oraArrivo = document.getElementById('oraArrivo');
+        var oraPartenza = document.getElementById('oraPartenza');
+        var tabellaPresenze = document.getElementById('tabellaPresenze');
+        var note = document.getElementById('note');
+
+        var oeggettoPresenza = {};//oggetto che conterrà i dati inseriti nel form
+        var presenze = [
+            {
+                'cognomeBambino': 'Rossi',
+                'nomeBambino': 'Mario',
+                'data': '11/5/2024',
+                'oraArrivo': '12:11',
+                'oraPartenza': '15:18',
+                'note': 'nessuna'
+            }];
+
+
+
+        function inviaPresenza() { // funzione che gestisce l'inserimento dei dati nella tabella
+
+            if (cognomeBambino.value === '' || nomeBambino.value === '' || data.value === '' || oraArrivo.value === '' || oraPartenza.value === '') {
+                alert("Verifica che i campi sono correttamente compilati");
+            }// se almeno un campo è vuoto mostra il messaggio di errore
+
+            else {
+
+                if (!controllaData()) { // caso in cui la funzione ritorna false allora mostra i dati nella tabella
+
+                    oeggettoPresenza = { 'cognomeBambino': cognomeBambino.value, 'nomeBambino': nomeBambino.value, 'data': new Date(data.value).toLocaleDateString(), 'oraArrivo': oraArrivo.value, 'oraPartenza': oraPartenza.value, "note": note.value };
+                    presenze.push(oeggettoPresenza);
+
+                    tabellaPresenze.innerHTML = "";
+
+                    presenze.forEach((presenza) => {
+                        tabellaPresenze.innerHTML += "<tr><td>" + presenza.cognomeBambino + "</td><td>" + presenza.nomeBambino + "</td><td>" + presenza.data + "</td><td>" + presenza.oraArrivo + "</td><td>" + presenza.oraPartenza + "</td><td>" + presenza.note + "</td></tr>";
+                    });
+
+                    resetta();
+                }
+
+
+                else {// caso in cui la funzione ritorna true e quindi la data inserita è precedente a quella odierna.
+                    alert("La data inserita non può essere precedente alla data odierna.");
+                }
+            }
+
+            // }
+
+        }
+
+
+
+
+        function resetta() {// funzione per resettare i campi
+
+            nomeBambino.value = "";
+            cognomeBambino.value = "";
+            data.value = "";
+            oraArrivo.value = "";
+            oraPartenza.value = "";
+            note.value = "";
+
+            //oeggettoPresenza={};
+
+        }
+
+
+        function controllaData() { // Questa funzione ritorna true se la dataInserita è precedente a quella odierna
+
+            var dataOdierna = new Date();
+            var dataInserita = new Date(data.value);
+
+            // console.log("DataOdierna",dataOdierna.toLocaleDateString());
+            // console.log('DataInserita',dataInserita.toLocaleDateString());
+
+
+
+            if (new Date(dataInserita.toLocaleDateString()) < new Date(dataOdierna.toLocaleDateString())) {
+
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            presenze.forEach((presenza) => {
+                tabellaPresenze.innerHTML += "<tr><td>" + presenza.cognomeBambino + "</td><td>" + presenza.nomeBambino + "</td><td>" + presenza.data + "</td><td>" + presenza.oraArrivo + "</td><td>" + presenza.oraPartenza + "</td><td>" + presenza.note + "</td></tr>";
+            });
+
+        })
+    </script>
+</body>
+</html>

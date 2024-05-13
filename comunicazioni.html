@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!--MetaTAG-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comunicazioni Genitori Asilo Nido" />
+    <meta name="keywords" content="Asilo Nido, Bambini" />
+    <meta name="author" content="Team 2: Luca Tassiello - Vincenzo Barone - Francesco Esposito - Giuseppe Giordano - Roberto Bucco - Mattia Bascelli" />
+    <meta name="robots" content="index, follow" />
+    <meta name="referrer" content="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="img/logoasilo.ico">
+    <title>Comunicazioni Genitori Asilo Nido - TEAM2</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+    <!--Link a Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!--CSS Personalizzato-->
+    <style>
+        body {
+            background-color: #6cc2c0;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .navbar {
+            background-color: #6cc2c0;
+        }
+
+            .navbar li:hover {
+                background-color: rgba(134, 202, 195, 0.9);
+                border-radius: 20px;
+            }
+
+        .pt-2 {
+            background-color: white;
+            border-radius: 15px 0px 15px 0px;
+        }
+
+        .footer {
+            text-align: center;
+/*            padding: 15px 0px 15px;
+*/        }
+
+        .logo {
+            width: 30px;
+            height: 24px;
+            margin-bottom: 4px;
+        }
+
+      /*  .tabComunicazioni {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+*/
+
+        @media screen and (max-width: 720px) {
+      /*      .table-responsive {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                -ms-overflow-style: -ms-autohiding-scrollbar;
+            }*/
+
+            .table {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <div class="container">
+                <a class="navbar-brand" href="homeLogged.html">
+                    <img src="img/logoasilo.png" alt="Gestionale Asilo Nido" class="logo"> Gestionale Asilo Nido
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse justify-content-end navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="homeLogged.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Docente
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="iscrizione.html">Iscrizione</a>
+                            <a class="dropdown-item" href="calendarioAttivita.html">Calendario Attività</a>
+                            <a class="dropdown-item" href="comunicazioni.html">Comunicazione Genitori</a>
+                            <a class="dropdown-item" href="gestionePresenze.html">Gestione Presenze</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="gestioneArmadietto.html">Gestione Armadietto</a>
+                            <a class="dropdown-item" href="menu.html">Gestione Menù Settimana</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contattiLogged.html">Developers</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="Index.html">LOGOUT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--MAIN Pagina   Qui potete cancellare e inserire il vostro codice HTML-->
+    <main class="pt-2">
+        <div class="container mt-5">
+            <h1 class="text-center">COMUNICAZIONI</h1>
+            <hr />
+            <div class="row">
+                <div class="col-lg-5 col-sm-12 col-md-12">
+                    <h2 class="text-center">Invia un Messaggio ai Genitori</h2>
+
+                    <form id="form-class-comunicazioni" action="#" method="get">
+
+                        <div class="form-floating mt-3 mb-3">
+                            <input id="cognomeBambino" type="text" class="form-control border-success" placeholder="Cognome">
+                            <label for="cognomeBambino">Cognome Bambino *</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input id="nomeBambino" type="text" class="form-control border-success" placeholder="Nome">
+                            <label for="nomeBambino">Nome Bambino *</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+
+                            <select class="form-select border-success" id="educatore">
+                                <option id="basic" value="seleziona">Seleziona</option>
+                                <!--option value="Nunzia">Nunzia</option>
+                                <option value="Maria">Maria</option>
+                                <option value="Giada">Giada</option>
+                                <option value="Giulia">Giulia</option>
+                                <option value="Anna">Anna</option>
+                                <option value="Giovanna">Giovanna</option>-->
+
+                            </select>
+
+                            <label for="educatore">Inserici il nome dell'Educatore</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input id="nomeCognomeGenitore" type="text" class="form-control border-success" placeholder="Nome e Cognome">
+                            <label for="nomeCognomeGenitore">Nome Genitore *</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input id="numeroGenitore" type="text" aria-label="Last name" class="form-control border-success" placeholder="Numero di Telefono">
+                            <label for="numeroGenitore">Numero Genitore *</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input id="data" class="form-control border-success" type="date" />
+                            <label for="data">Data *</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <textarea id="nota" class="form-control border-success" placeholder="Leave a comment here" aria-label="With textarea"></textarea>
+                            <label for="nota">Comunicazione *</label>
+                        </div>
+                        <button type="submit" onclick="inviaComunicazione(event)" class="btn btn-outline-success mb-3">
+                            Invia Comunicazione
+                        </button>
+                        <button type="button" onclick="aggiungiEducatore()" class="btn btn-outline-success mb-3">
+                            Aggiungi Educatore
+                        </button>
+
+
+                    </form>
+                </div>
+
+
+                <div class="col-lg-7 col-md-12 col-sm-12 table-responsive">
+                    <div class="tabComunicazioni">
+                        <h2 class="text-center">Lista delle Comunicazioni</h2>
+
+                        <table class="table">
+                            <tr class="table-info">
+                                <th>Cognome</th>
+                                <th>Nome</th>
+                                <th>Educatore</th>
+                                <th>Genitore</th>
+                                <th>Telefono</th>
+                                <th>Data</th>
+                                <th>Nota</th>
+                            </tr>
+                            <tbody id="tabellaComunicazioni">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+    </main>
+
+    <footer>
+        <div class="footer mt-2">
+            <p>&copy; 2024 TEAM2 - Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+
+
+    <script>
+
+        var nomeBambino = document.getElementById("nomeBambino");
+        var cognomeBambino = document.getElementById("cognomeBambino");
+        var educatore = document.getElementById("educatore");
+        var nomeCognomeGenitore = document.getElementById("nomeCognomeGenitore");
+        var numeroGenitore = document.getElementById("numeroGenitore");
+        var data = document.getElementById("data");
+        var nota = document.getElementById("nota");
+
+        var listaComunicazioneElement = document.getElementById('tabellaComunicazioni');
+
+        var oggettoComunicazione = {};
+
+        var arrayEducatori = ["Nunzia", "Maria", "Giada", "Giulia", "Anna", "Giovanna"];
+
+
+        var comunicazioni = [
+            {
+
+                cognomeBambino: 'Bianchi',
+                nomeBambino: 'Antonio',
+                educatore: 'NUNZIA',
+                nomeCognomeGenitore: 'Mario Rossi',
+                numeroGenitore: '3335554488',
+                data: '15/12/2024',
+                nota: 'Antonio non ha mangiato tutti i pasti',
+            }
+        ];
+
+
+
+        function inviaComunicazione(event) {
+            event.preventDefault();
+
+            if ((cognomeBambino.value === '') || (nomeBambino.value === '') || (educatore.value === 'seleziona') || (nomeCognomeGenitore.value === '') || (numeroGenitore === '') || (data.value === '') || (nota.value === '')) {
+                alert("Verifica che i campi sono correttamente compilati.");
+            }
+            else {
+                oggettoComunicazione = { 'cognomeBambino': cognomeBambino.value, 'nomeBambino': nomeBambino.value, 'educatore': educatore.value, 'nomeCognomeGenitore': nomeCognomeGenitore.value, 'numeroGenitore': numeroGenitore.value, 'data': new Date(data.value).toLocaleDateString(), 'nota': nota.value };
+                comunicazioni.push(oggettoComunicazione);
+                listaComunicazioneElement.innerHTML = "";
+
+                comunicazioni.forEach((comunicazione) => {
+                    listaComunicazioneElement.innerHTML += "<tr><td>" + comunicazione.cognomeBambino + "</td><td>" + comunicazione.nomeBambino + "</td><td>" + comunicazione.educatore + "</td><td>" + comunicazione.nomeCognomeGenitore + "</td><td>" + comunicazione.numeroGenitore + "</td><td>" + comunicazione.data + "</td><td>" + comunicazione.nota + "</td></tr>";
+                });
+
+                resetta();
+            }
+        }
+        function resetta() {
+
+            document.getElementById("educatore").selectedIndex = 0;
+            cognomeBambino.value = "";
+            nomeBambino.value = "";
+            nomeCognomeGenitore.value = "";
+            numeroGenitore.value = "";
+            data.value = "";
+            nota.value = "";
+
+        }
+        //funzione per il click dell'aggiunta del nuovo Educatore tramite il prompt
+        function aggiungiEducatore() {
+            //fare controllo campo inserito vuoto
+
+            var nomeEducatore = prompt("Inserisci nome del nuovo Educatore:"); //al momento del click si apre il prompt che fa inserire il nome educatore
+
+            // Controllo se il campo è vuoto o è stato premuto "Annulla"
+            while (!nomeEducatore.trim()) {
+                nomeEducatore = prompt("Inserisci nome dell'Educatore:");
+            }
+
+            arrayEducatori.push(nomeEducatore); //aggiunta del nomeEducatore nel nostro array del select
+
+            alert("Hai inserito l'Educatore: " + nomeEducatore);
+
+            //aggiorniamo il nostro select tramite la nostra funzione
+            updateSelect(arrayEducatori);
+
+
+
+
+
+        }
+        //funzione che aggiorna a video il nostro select il dato inserito in input
+        function updateSelect() {
+
+            educatore.innerHTML = `<option id="basic" value="seleziona">Seleziona</option>`;
+            for (var i = 0; i < arrayEducatori.length; i++) {
+                educatore.innerHTML += `<option value=${arrayEducatori[i]}>${arrayEducatori[i]}</option>`;
+            }
+        }
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            comunicazioni.forEach((comunicazione) => {
+                listaComunicazioneElement.innerHTML += "<tr><td>" + comunicazione.cognomeBambino + "</td><td>" + comunicazione.nomeBambino + "</td><td>" + comunicazione.educatore + "</td><td>" + comunicazione.nomeCognomeGenitore + "</td><td>" + comunicazione.numeroGenitore + "</td><td>" + comunicazione.data + "</td><td>" + comunicazione.nota + "</td></tr>";
+            });
+            for (var i = 0; i < arrayEducatori.length; i++) {
+                educatore.innerHTML += `<option value=${arrayEducatori[i]}>${arrayEducatori[i]}</option>`;
+            }
+        })
+
+
+
+
+    </script>
+</body>
+</html>
+

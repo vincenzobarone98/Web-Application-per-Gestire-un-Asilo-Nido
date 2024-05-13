@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calendario Attività dell'Asilo Nido" />
+    <meta name="keywords" content="Asilo Nido, Bambini, Calendario, attività" />
+    <meta name="author" content="Team 2: Luca Tassiello - Vincenzo Barone - Francesco Esposito - Giuseppe Giordano - Roberto Bucco - Mattia Bascelli" />
+    <meta name="robots" content="index, follow" />
+    <meta name="referrer" content="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="img/logoasilo.ico">
+    <title>Calendario delle Attività Asilo Nido - TEAM2</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <style>
+
+        @media screen and (max-width: 720px) {
+            .table-responsive {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                -ms-overflow-style: -ms-autohiding-scrollbar;
+            }
+
+            .table {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+
+        body {
+            background-color: #6cc2c0;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .navbar {
+            background-color: #6cc2c0;
+        }
+
+            .navbar li:hover {
+                background-color: rgba(134, 202, 195, 0.9);
+                border-radius: 20px;
+            }
+
+        .pt-2 {
+            background-color: white;
+            border-radius: 15px 0px 15px 0px;
+        }
+
+        .footer {
+            text-align: center;
+        }
+
+
+        .logo {
+            width: 30px;
+            height: 24px;
+            margin-bottom: 4px;
+        }
+    </style>
+
+
+</head>
+ <body>
+     <!--Navbar-->
+     <nav class="navbar navbar-expand-lg">
+         <div class="container-fluid">
+             <div class="container">
+                 <a class="navbar-brand" href="homeLogged.html">
+                     <img src="img/logoasilo.png" alt="Gestionale Asilo Nido" class="logo"> Gestionale Asilo Nido
+                 </a>
+             </div>
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Navigation">
+                 <span class="navbar-toggler-icon"></span>
+             </button>
+             <div class="collapse justify-content-end navbar-collapse" id="navbarNav">
+                 <ul class="navbar-nav">
+                     <li class="nav-item active">
+                         <a class="nav-link" href="homeLogged.html">Home</a>
+                     </li>
+                     <li class="nav-item dropdown">
+                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                             Docente
+                         </a>
+                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                             <a class="dropdown-item" href="iscrizione.html">Iscrizione</a>
+                             <a class="dropdown-item" href="calendarioAttivita.html">Calendario Attività</a>
+                             <a class="dropdown-item" href="comunicazioni.html">Comunicazione Genitori</a>
+                             <a class="dropdown-item" href="gestionePresenze.html">Gestione Presenze</a>
+                             <div class="dropdown-divider"></div>
+                             <a class="dropdown-item" href="gestioneArmadietto.html">Gestione Armadietto</a>
+                             <a class="dropdown-item" href="menu.html">Gestione Menù Settimana</a>
+                         </div>
+                     </li>
+                     <li class="nav-item">
+                         <a class="nav-link" href="contattiLogged.html">Developers</a>
+                     </li>
+                     <li class="nav-item active">
+                         <a class="nav-link" href="Index.html">LOGOUT</a>
+                     </li>
+                 </ul>
+             </div>
+         </div>
+     </nav>
+
+
+     <main class="pt-2">
+         <div class="container mt-5">
+             <h1 class="text-center">GESTIONE DELLE ATTIVITA'</h1>
+             <hr />
+
+             <div class="row">
+                 <div class="col-lg-6 col-md-12 col-sm-12">
+
+                     <div class="title mt-3 mb-3">
+                         <h2 class="text-center"> Inserisci le attività settimanali</h2>
+                     </div>
+
+                     <div class="form-floating mb-3">
+                         <select class="form-select mb-3 border-success" aria-label="Floating label select example" id="selectGiorno">
+                             <option value="seleziona" id="giornoSettimana">Seleziona</option>
+                             <option value="lunedì">Lunedì</option>
+                             <option value="martedì">Martedì</option>
+                             <option value="mercoledì">Mercoledì</option>
+                             <option value="giovedì">Giovedì</option>
+                             <option value="venerdì">Venerdì</option>
+                         </select>
+                         <label for="selectGiorno" class="form-label">Seleziona il giorno della settimana:</label>
+
+                     </div>
+
+                     <div class="form-floating mb-3">
+                         <input type="text" class="form-control border-success mb-3" id="nomeEvento" placeholder="Nome Evento" required>
+                         <label for="nomeEvento" class="form-label">Nome dell'Evento:</label>
+                     </div>
+
+                     <div class="form-floating mb-3 ">
+                         <input type="text" class="form-control border-success mb-3" id="descrizioneAttività" placeholder="Descrizione Attività" required>
+                         <label for="descrizioneAttività" class="form-label">Descrivi l'Attività:</label>
+                     </div>
+
+                     <div class="form-floating mb-3">
+                         <input type="time" class="form-control border-success mb-3" id="oraInizio" placeholder="Orario Inzio" required>
+                         <label for="oraInizio" class="form-label">Ora Inizio:</label>
+                     </div>
+
+                     <div class="form-floating mb-3">
+                         <input type="time" class="form-control border-success mb-3" id="oraFine" placeholder="Orario Fine" required>
+                         <label for="oraFine" class="form-label">Ora Fine:</label>
+                     </div>
+
+                     <div class="form-floating mb-3 ">
+                         <textarea id="commento" class="form-control border-success mb-3" placeholder="Inserisci un commento:" name="commento"></textarea>
+                         <label for="commento">Inserisci un commento:</label>
+                     </div>
+
+                     <input type="submit" class="btn btn-outline-success mb-3" onclick="aggiungiAttivita()" id="Invia" />
+                 </div>
+
+                 <div class="col-lg-6 col-md-12 col-sm-12 table-responsive">
+                     <div class="title mt-3 mb-3">
+                         <h2 class="text-center">Attività Settimanali</h2>
+                     </div>
+
+
+                     <table class="table">
+                         <thead>
+                             <tr class="table-info">
+                                 <th>Giorno Settimana</th>
+                                 <th>Nome Evento</th>
+                                 <th>Descrizione Attività</th>
+                                 <th>Ora Inizio</th>
+                                 <th>Ora fine</th>
+                                 <th>Commento</th>
+                             </tr>
+                         </thead>
+                         <tbody id="tabella">
+                         </tbody>
+                     </table>
+
+
+                 </div>
+
+             </div>
+         </div>
+     </main>
+
+     <script>
+
+         var selectGiorno = document.getElementById("selectGiorno");
+
+         var nomeEvento = document.getElementById("nomeEvento");
+         var descrizioneAttività = document.getElementById("descrizioneAttività");
+         var oraInizio = document.getElementById("oraInizio");
+         var oraFine = document.getElementById("oraFine");
+         var commento = document.getElementById("commento");
+
+         var tabella = document.getElementById("tabella");
+
+         function aggiungiAttivita() {
+
+             if ((selectGiorno.value === "seleziona") || (nomeEvento.value === "") || (descrizioneAttività.value === "") || (oraInizio.value === "") || (oraFine.value === "")) {
+                 alert("Devi compilare tutti i campi!");
+
+             } else {
+
+                 //tabella.innerHTML = "";
+                 tabella.innerHTML += "<tr><td>" + selectGiorno.value + "</td><td>" + nomeEvento.value + "</td><td>" + descrizioneAttività.value + "</td><td>"
+                     + oraInizio.value + "</td><td>" + oraFine.value + "</td><td>" + commento.value + "</td></tr>";
+
+                 nomeEvento.value = "";
+                 descrizioneAttività.value = "";
+                 oraInizio.value = "";
+                 oraFine.value = "";
+                 commento.value = "";
+                 selectGiorno.selectedIndex = 0;
+             }
+         }
+
+
+
+
+     </script>
+
+     <footer >
+         <div class="footer mt-3">
+             <p>&copy; 2024 TEAM2 - Tutti i diritti riservati.</p>
+         </div>
+     </footer>
+
+ </body>
+ </html>

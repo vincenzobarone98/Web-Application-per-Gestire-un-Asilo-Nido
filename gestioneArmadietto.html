@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!--MetaTAG-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gestione Armadietto Asilo Nido" />
+    <meta name="keywords" content="Asilo Nido, Bambini, armadietto, pannolini" />
+    <meta name="author" content="Team 2: Luca Tassiello - Vincenzo Barone - Francesco Esposito - Giuseppe Giordano - Roberto Bucco - Mattia Bascelli" />
+    <meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/x-icon" href="img/logoasilo.ico">
+    <title>Gestione Armadietto Asilo Nido - TEAM2</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+    <!--Link a Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!--CSS Personalizzato-->
+    <style>
+        body {
+            background-color: #6cc2c0;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .navbar {
+            background-color: #6cc2c0;
+        }
+
+            .navbar li:hover {
+                background-color: rgba(134, 202, 195, 0.9);
+                border-radius: 20px;
+            }
+
+        .pt-2 {
+            background-color: white;
+            border-radius: 15px 0px 15px 0px;
+        }
+
+        .footer {
+            text-align: center;
+        }
+
+        .logo {
+            width: 30px;
+            height: 24px;
+            margin-bottom: 4px;
+        }
+
+        .tabArmadietto {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
+
+
+        @media screen and (max-width: 720px) {
+            .table-responsive {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                -ms-overflow-style: -ms-autohiding-scrollbar;
+            }
+
+            .table {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <div class="container">
+                <a class="navbar-brand" href="homeLogged.html">
+                    <img src="img/logoasilo.png" alt="Gestionale Asilo Nido" class="logo"> Gestionale Asilo Nido
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse justify-content-end navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="homeLogged.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Docente
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="iscrizione.html">Iscrizione</a>
+                            <a class="dropdown-item" href="calendarioAttivita.html">Calendario Attività</a>
+                            <a class="dropdown-item" href="comunicazioni.html">Comunicazione Genitori</a>
+                            <a class="dropdown-item" href="gestionePresenze.html">Gestione Presenze</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="gestioneArmadietto.html">Gestione Armadietto</a>
+                            <a class="dropdown-item" href="menu.html">Gestione Menù Settimana</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contattiLogged.html">Developers</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="Index.html">LOGOUT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--MAIN Pagina   Qui potete cancellare e inserire il vostro codice HTML-->
+    <main class="pt-2">
+        <div class="container mt-5">
+            <h1 class="text-center">GESTIONE ARMADIETTO</h1>
+            <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </p>
+            <hr />
+            <!-- form invio email -->
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12 mt-3">
+                    <h2 class="text-center">Modulo inserimento Armadietto</h2>
+                    <form id="form-class-armadietto">
+                        <div class="form-floating mt-3">
+
+                            <select class="form-select mb-3 border-success" aria-label="Floating label select example" id="armadietto">
+                                <option value="seleziona" id="basic">Seleziona</option>
+                                <option value="1a">1a</option>
+                                <option value="2a">2a</option>
+                                <option value="3a">3a</option>
+                                <option value="4a">4a</option>
+                                <option value="5b">5b</option>
+                                <option value="6b">6b</option>
+                                <option value="7b">7b</option>
+                                <option value="8b">8b</option>
+                            </select>
+                            <label for="armadietto">Inserisci il numero dell'armadietto</label>
+
+                        </div>
+                        <div class="form-floating mb-3 ">
+                            <input type="text" class="form-control border-success" id="bambino" placeholder="Rossi">
+                            <label for="bambino">Nome Bambino *</label>
+                        </div>
+                        <div class="form-floating mb-3 ">
+                            <input type="text" class="form-control border-success" id="ricambio" placeholder="Rossi">
+                            <label for="ricambio">Ricambio *</label>
+                        </div>
+                        <div class="form-check form-switch mb-3">
+                            <input class="form-check-input " type="checkbox" id="pannolini">
+                            <label class="form-check-label" for="pannolini">Pannolini</label>
+                        </div>
+                        <div class="form-floating mb-3 ">
+                            <input type="text" class="form-control border-success" id="medicinali" placeholder="Rossi">
+                            <label for="medicinali">Medicinali *</label>
+                        </div>
+
+                        <button type="button" onclick="aggiungiArmadietto()" class="btn btn-outline-success">Inserisci Dati</button>
+                        <br />
+                        <br />
+                    </form>
+                </div>
+
+
+                <div class="col-lg-6 col-md-12 col-sm-12 table-responsive">
+                    <div class="tabArmadietto mt-3">
+                        <h2 class="text-center">Riepilogo Armadietto Bambini</h2>
+                        <table class="table">
+                            <thead>
+                                <tr class="table-info">
+                                    <th>Armadietto</th>
+                                    <th>Bambino</th>
+                                    <th>Ricambi</th>
+                                    <th>Pannolini</th>
+                                    <th>Medicinali</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabella">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+    </main>
+    <footer>
+        <div class="footer">
+            <p>&copy; 2024 TEAM2 - Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+    <!--Script del modulo-->
+    <script>
+
+        var numeroArmadietto = document.getElementById('armadietto');
+        var bambino = document.getElementById('bambino');
+        var ricambio = document.getElementById('ricambio');
+
+        var medicinali = document.getElementById('medicinali');
+
+        var listaArmadiettoElement = document.getElementById('tabella');
+        var oggettoArmadietti = {};
+        var armadietti = [
+            {
+                numeroArmadietto: '1a',
+                bambino: 'Luca Di Girolamo',
+                ricambio: 'due magliette',
+                pannolini: 'Si',
+                medicinali: 'Zirtec'
+            },
+            {
+                numeroArmadietto: '5b',
+                bambino: 'Francesca Biachi',
+                ricambio: 'maglietta e pantaloncini',
+                pannolini: 'No',
+                medicinali: 'Gaviscon'
+            }
+        ];
+        function aggiungiArmadietto() {
+
+            var pannolini = document.getElementById('pannolini');
+            var spunta = pannolini.checked ? 'Si' : 'No';
+            //console.log(numeroArmadietto);
+            if ((numeroArmadietto.value === 'seleziona') || (bambino.value === '') || (ricambio.value === '') || (medicinali.value === '')) {
+                alert("Verifica che i campi sono correttamente compilati.");
+            }
+            else {
+                oggettoArmadietti = { 'numeroArmadietto': numeroArmadietto.value, 'bambino': bambino.value, 'ricambio': ricambio.value, 'pannolini': spunta, 'medicinali': medicinali.value };
+                armadietti.push(oggettoArmadietti);
+                listaArmadiettoElement.innerHTML = "";
+
+                armadietti.forEach((armadietto) => {
+                    listaArmadiettoElement.innerHTML += "<tr><td>" + armadietto.numeroArmadietto + "</td><td>" + armadietto.bambino + "</td><td>" + armadietto.ricambio + "</td><td>" + armadietto.pannolini + "</td><td>" + armadietto.medicinali + "</td></tr>";
+                });
+
+                resetta();
+            }
+        }
+        function resetta() {// funzione per resettare i campi
+
+            document.getElementById("armadietto").selectedIndex = 0;
+            pannolini.checked = false;
+            bambino.value = "";
+            ricambio.value = "";
+            medicinali.value = "";
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+
+            armadietti.forEach((armadietto) => {
+                listaArmadiettoElement.innerHTML += "<tr><td>" + armadietto.numeroArmadietto + "</td><td>" + armadietto.bambino + "</td><td>" + armadietto.ricambio + "</td><td>" + armadietto.pannolini + "</td><td>" + armadietto.medicinali + "</td></tr>";
+            });
+        })
+    </script>
+</body>
+</html>
